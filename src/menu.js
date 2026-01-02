@@ -28,7 +28,7 @@ class Menu {
             } else if (menuChoice === '2') {
                 while (menuChoice === '2') {
                     const removeItemName = prompt('Enter item name to remove: ');
-                    const removedItem = this.list.find(item => item.name === removeItemName)
+                    const removedItem = this.list.find(item => item.name.toUpperCase() === removeItemName.toUpperCase())
                     if (!removedItem) {
                         console.log(`invalid item name. Please try again.`)
                         break;
@@ -45,7 +45,16 @@ class Menu {
                     }
                 }
             } else if (menuChoice === '3') {
-                // viewList();;
+                console.log(`${this.name}'s Shopping List:`)
+                this.list.forEach(item => item.viewItem())
+                const totalItems = this.list
+                    .map(item => Number(item.quantity))
+                    .reduce((acc, val) => acc + val, 0)
+                const totalPrice = this.list
+                    .map(item => Number(item.totalPrice()))
+                    .reduce((acc, val) => acc + val, 0)
+                console.log(`Total Items: ${totalItems}`)
+                console.log(`Total Price: $${totalPrice.toFixed(2)}`)
             } else if (menuChoice === '4') {
                 this.isRunning = false;
             } else {

@@ -7,7 +7,7 @@ class Item {
         this.pricePerItem = pricePerItem
     }
     addItem() {
-        console.log(`Added ${this.quantity} ${this.name} at $${this.pricePerItem} each to your shopping list!`)
+        console.log(`Added ${this.quantity} ${this.name} at $${Number(this.pricePerItem).toFixed(2)} each to your shopping list!`)
     }
 
     removeItem(num) {
@@ -15,7 +15,7 @@ class Item {
     }
 
     viewItem() {
-        return `- ${this.quantity} ${this.name}: $${this.pricePerItem}`
+        console.log(`- ${this.quantity} ${this.name}: $${Number(this.pricePerItem).toFixed(2)}`);
     }
 
     totalPrice() {
