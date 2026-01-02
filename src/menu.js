@@ -22,7 +22,9 @@ class Menu {
                 const itemName = prompt('Enter item name: ');
                 const itemNum = prompt('Enter item quantity: ')
                 const itemPrice = prompt(`Enter price per item: `)
-                // addItem(item);
+                const newItem = new Item(itemName, itemNum, itemPrice)
+                this.list.push(newItem)
+                newItem.addItem
             } else if (menuChoice === '2') {
                 const RemoveItem = prompt('Enter item name to remove: ');
                 const RemoveItemNum = prompt(`Enter quantity to remove: `)
