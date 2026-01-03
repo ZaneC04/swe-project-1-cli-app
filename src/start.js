@@ -7,7 +7,7 @@ const startApp = () => {
     console.clear();
     console.log(`Welcome to ${shoppingListName}'s Shopping List!\n`);
     shoppingList.showMenu();
-    console.log("Goodbye!");
+    console.log("Thanks for your usage! See you next time!");
 }
 
 startApp();
