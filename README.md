@@ -12,7 +12,7 @@ After running the application, the user is presented with a menu of options. The
 
 In the screenshot below, you can see a user selecting the "Add Item" option and entering their item, along with its quantity and price.
 
-[Example of the CLI Shopping List](img/shoppinglistexample.png)
+![Example of the CLI Shopping List](img/shoppinglistexample.png)
 
 ## Setup
 
